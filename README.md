@@ -3,6 +3,10 @@
 
 > A ZAPI é uma REST API simples que faz a comunicação entre aplicativos externos e o WhatsApp. Através dessa API, é possível enviar mensagens, realizar ações automatizadas e interagir com os usuários do WhatsApp de forma programática.
 
+### Demonstração da aplicação 
+
+Em construção...  🚧
+
 ### 💻 Pré-requisitos
 
 Antes de começar, você vai precisar ter instalado em sua máquina:
@@ -30,6 +34,10 @@ $  npm start
 
 # O servidor inciará na porta:8000 - acesse <http://localhost:8000>
 ```
+
+### Funções básicas (uso)
+
+Em construção...  🚧
 
 ### 🛠 Tecnologias
 

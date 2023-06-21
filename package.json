@@ -1,0 +1,25 @@
+{
+  "name": "zapi",
+  "version": "1.0.0",
+  "description": "REST API para envio de mensagens pelo WhatsApp",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Cristianpl4y/zapi.git"
+  },
+  "author": "Cristian Pessanha",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Cristianpl4y/zapi/issues"
+  },
+  "homepage": "https://github.com/Cristianpl4y/zapi#readme",
+  "dependencies": {
+    "express": "^4.18.2",
+    "express-validator": "^7.0.1",
+    "http": "^0.0.1-security",
+    "venom-bot": "^5.0.6"
+  }
+}
