@@ -129,6 +129,43 @@ function start(client){
 
     });
 
+    // Metodo send-image - Está funcionando!
+    app.post('/send-image', [
+        body('number').notEmpty(),
+        body('imgUrl').notEmpty(),
+        body('imgName').notEmpty(),
+        body('desc').notEmpty()
+    ], async (req, res) => {
+        const errors = validationResult(req).formatWith(({ msg })=>{ return msg });
+
+        if(!errors.isEmpty()){
+            return res.status(422).json({
+                stats: false,
+                message: errors.mapped()
+            });
+        }
+
+        const number = req.body.number + '@c.us';
+        const imgUrl = req.body.imgUrl;
+        const imgName = req.body.imgName;
+        const desc = req.body.desc;
+
+        // Envia a mensagem com imagem e descrição
+        client.sendImage(number,imgUrl,imgName,desc).then(response => {
+            res.status(200).json({
+                status: true,
+                message: 'Mensagem enviada',
+                response: response
+            });
+        }).catch(err => {
+            res.status(500).json({
+                status: false,
+                message: 'Mensagem não enviada',
+                response: err.text
+            });
+        });
+    });
+
     // Criar outros endpoints...
 
 }
